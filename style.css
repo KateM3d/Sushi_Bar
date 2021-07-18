@@ -2,12 +2,10 @@ body {
     background-color: #111111;
 }
 
-main {
-    background-color: #111111;
+.sectionOne {
     background-image: url(/img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .heading {
@@ -20,6 +18,10 @@ h1 {
     font-family: 'Otomanopee One', sans-serif;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+.sectionTwo {
+    margin-top: 10vh;
 }
 
 .container_countdown {
@@ -55,6 +57,13 @@ p {
     text-align: center;
 }
 
+h5 {
+    font-size: 0;
+    font-family: 'Otomanopee One', sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
 .container_slider {
     background-color: #111111;
     background-size: cover;
@@ -78,8 +87,19 @@ p {
     height: 90vh;
     background-size: cover;
     background-position: center;
-    flex: 1;
     margin: 5px;
+    flex: 1;
+}
+
+.selected {
+    flex: 3;
+    transition: 1s ease-in;
+}
+
+.selected h5 {
+    font-size: 30px;
+    color: #fff;
+    transition: all 1s ease-in;
 }
 
 .one {
@@ -100,4 +120,46 @@ p {
 
 .five {
     background-image: url(/img/5.jpg);
+}
+
+@media all and (max-width: 900px) {
+    .container_slider {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .item {
+        width: 70vw;
+    }
+    .selected {
+        flex: 4;
+        transition: 1s ease-in;
+    }
+    .selected h5 {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 615px) {
+    h1 {
+        font-size: 70px;
+    }
+    .sectionTwo {
+        margin-top: 15vh;
+    }
+}
+
+@media all and (max-width: 360px) {
+    h1 {
+        font-size: 40px;
+    }
+    h3,
+    h4 {
+        font-size: 20px;
+    }
+    .selected h5 {
+        font-size: 10px;
+    }
 }
